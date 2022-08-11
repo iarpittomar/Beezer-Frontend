@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+/* Reach UI modules styling hooks added for custom styling */
+
+[data-reach-menu] {
+  position: absolute;
+}
+
+:focus {
+  outline: none;
+}
+[data-whatintent="keyboard"] *:focus {
+  box-shadow: rgba(66, 153, 225, 0.6) 0 0 0 3px !important;
+  outline: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  color: #3a424f;
+  background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+strong {
+  font-weight: 600;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  max-width: 100%;
+}
+
+.recharts-wrapper svg {
+  height: auto;
+  width: auto;
+}
+
+svg {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  pointer-events: none;
+}
+
+select {
+  background-color: transparent;
+}
+
+[data-user-value="true"] {
+  font-weight: 700;
+}
+
+textarea {
+  resize: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(158, 158, 158, 0.5);
+}
+
+.quoting-questions-container input {
+  scroll-margin-top: 12rem;
+}
+
+/*info: hack for not showing placeholder which is implicitly set by google*/
+.google-map-input::placeholder {
+  color: transparent;
+}
+
+/*@info: google address dropdown z-index greater than modal */
+.pac-container {
+  z-index: 1500;
+}
+
+/*@info for visually hiding*/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
