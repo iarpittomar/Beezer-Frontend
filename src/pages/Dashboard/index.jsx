@@ -38,7 +38,7 @@ const Dashboard = () => {
 
   React.useEffect(() => {
     fetchAppsData();
-  }, []);
+  }, [fetchAppsData]);
 
   return (
     <React.Fragment>

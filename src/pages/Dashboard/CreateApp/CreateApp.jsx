@@ -1,4 +1,3 @@
-import { useDisclosure } from '@chakra-ui/hooks';
 import {
   Modal,
   ModalBody,
