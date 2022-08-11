@@ -24,8 +24,6 @@ const AuthProvider = ({ ...props }) => {
   React.useEffect(() => {
     if (token) {
       navigate('/dashboard');
-    } else {
-      navigate('/login');
     }
   }, [token, navigate]);
 
@@ -119,8 +117,6 @@ const AuthProvider = ({ ...props }) => {
         .then((token) => {
           setToken(token);
           setTokenToLocalStorage('token', token);
-          console.log(token);
-          console.log('in authState change');
         })
         .catch((error) => {});
     });

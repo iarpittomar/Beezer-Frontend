@@ -155,7 +155,6 @@ const SignUpForm = ({ styleProps }) => {
                             height='4rem'
                             placeholder='Confirm your password'
                             focusBorderColor='primary.300'
-                            autoComplete={false}
                           />
                           <FormErrorMessage>
                             {form.errors.confirmPassword}

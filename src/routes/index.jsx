@@ -7,7 +7,7 @@ const Dashboard = React.lazy(() => import('../pages/Dashboard'));
 
 const BeezerRoutes = React.memo(() => {
   return (
-    <React.Suspense fallback={<span>Faled</span>}>
+    <React.Suspense fallback={<span>Failed</span>}>
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<SignUp />} />

@@ -8,9 +8,11 @@ import { Button } from '@chakra-ui/button';
 import { Avatar } from '@chakra-ui/avatar';
 import { useDisclosure } from '@chakra-ui/hooks';
 import CreateApp from './CreateApp/CreateApp';
+import { useNavigate } from 'react-router';
 
 const Dashboard = () => {
   const auth = useAuth();
+  const navigate = useNavigate();
   const [appsList, setAppList] = React.useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -37,8 +39,12 @@ const Dashboard = () => {
   };
 
   React.useEffect(() => {
-    fetchAppsData();
-  }, [fetchAppsData]);
+    if (auth.token) {
+      fetchAppsData();
+    } else {
+      navigate('/login');
+    }
+  }, [fetchAppsData, auth.token, navigate]);
 
   return (
     <React.Fragment>
